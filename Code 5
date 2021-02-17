@@ -1,0 +1,4 @@
+SELECT city, category_name, sum(bottles_sold) as total_sold
+FROM `bigquery-public-data.iowa_liquor_sales.sales` 
+where date>= "2012-02-01"and date<= "2020-09-25" and county = "Linn"
+group by category_name,city
