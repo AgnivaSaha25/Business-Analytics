@@ -1,0 +1,4 @@
+SELECT nppes_provider_city, count(nppes_provider_last_org_name) as total_provider
+FROM `bigquery-public-data.medicare.physicians_and_other_supplier_2014`
+where  provider_type = "Cardiac Electrophysiology"
+group by nppes_provider_city limit 25
