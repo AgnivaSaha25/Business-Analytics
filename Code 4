@@ -1,0 +1,4 @@
+SELECT location_description, sum(beat) as beat_case
+FROM `bigquery-public-data.chicago_crime.crime` 
+where arrest=true
+group by location_description
