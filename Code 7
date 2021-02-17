@@ -1,0 +1,5 @@
+SELECT  inpatient.average_total_payments as inpatient_average , outpatient.average_total_payments as outpatient_average
+FROM `bigquery-public-data.medicare.inpatient_charges_2014` inpatient
+LEFT JOIN `bigquery-public-data.medicare.outpatient_charges_2014`outpatient
+on (inpatient.provider_id= outpatient.provider_id)
+order by inpatient.average_total_payments, outpatient.average_total_payments desc
