@@ -1,0 +1,3 @@
+SELECT country_name, year,infant_mortality, life_expectancy
+FROM `bigquery-public-data.census_bureau_international.mortality_life_expectancy` 
+where infant_mortality <15 and country_name='Aruba' and life_expectancy>70 
