@@ -1,0 +1,4 @@
+SELECT  institutions.institution_name, institutions.state_name, institutions.total_assets,locations.branch_name,locations.branch_city,institutions.fed_reserve_unique_id
+FROM `bigquery-public-data.fdic_banks.institutions` institutions
+LEFT JOIN `bigquery-public-data.fdic_banks.locations` locations
+on (institutions.fdic_certificate_number=locations.fdic_certificate_number)
