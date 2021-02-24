@@ -1,0 +1,4 @@
+SELECT  food_enforcement.recall_number as recall_number, food_events.outcomes as outcomes,food_enforcement.classification as classification
+FROM `bigquery-public-data.fda_food.food_enforcement` food_enforcement
+left join `bigquery-public-data.fda_food.food_events` food_events
+on (food_enforcement.recall_initiation_date=food_events.date_started)
