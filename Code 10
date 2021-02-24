@@ -1,0 +1,4 @@
+SELECT  *
+FROM `bigquery-public-data.cms_synthetic_patient_data_omop.person` person
+left join `bigquery-public-data.cms_synthetic_patient_data_omop.death` death
+on person.person_id=death.person_id
